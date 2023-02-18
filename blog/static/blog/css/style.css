@@ -51,3 +51,21 @@
     color: white;
     font-family: "Poppins", sans-serif;
 }
+
+.col-2 {
+    border-style: ridge;
+    font-size: 24px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.col-10 {
+    border-style: ridge;
+    font-size: 14px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.col-3 {
+    color: white;
+}

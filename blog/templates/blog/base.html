@@ -36,9 +36,14 @@
                            aria-expanded="false">Регистрация/Вход
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a href="{% url 'register' %}" class="dropdown-item">Регистрация</a></li>
-                            <li><a href="#" class="dropdown-item">Drop2</a></li>
-                            <li><a href="#" class="dropdown-item">Drop3</a></li>
+                            {% if request.user.is_authenticated %}
+                                <li class="last">Привет, <a href="{% url 'profile' %}">{{ user.username }}</a> | <a
+                                        href="{% url 'logout' %}">Выйти</a></li>
+                            {% else %}
+                                <li><a href="{% url 'register' %}" class="dropdown-item">Регистрация</a></li>
+                                <li><a href="{% url 'login' %}" class="dropdown-item">Вход</a></li>
+                                <li><a href="#" class="dropdown-item">Drop3</a></li>
+                            {% endif %}
                         </ul>
                     </li>
                 </ul>

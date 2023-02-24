@@ -2,7 +2,8 @@
 {% block content %}
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    <p><label class="col-3" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label> {{ form.username }} </p>
+    <p><label class="col-3" for="{{ form.password.id_for_label }}">{{ form.password.label }}</label> {{ form.password }} </p>
     <button type="submit">Войти</button>
 </form>
 {%  endblock %}

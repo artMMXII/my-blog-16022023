@@ -3,10 +3,16 @@
     <form method="post">
         {% csrf_token %}
         <p><label class="col-3"
+                  for="{{ form.username.id_for_label }}">{{ form.username.label }}</label> {{ form.username }}
+        </p>
+        <p><label class="col-3"
                   for="{{ form.first_name.id_for_label }}">{{ form.first_name.label }}</label> {{ form.first_name }}
         </p>
         <p><label class="col-3"
                   for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}</label> {{ form.last_name }}
+        </p>
+        <p><label class="col-3"
+                  for="{{ form.email.id_for_label }}">{{ form.email.label }}</label> {{ form.email }}
         </p>
         <button type="submit">Сохранить</button>
     </form>
